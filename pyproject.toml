@@ -1,0 +1,27 @@
+[project]
+name = "ubuntu-user-panel"
+version = "0.1.0"
+authors = [{name = "panjd123", email = "xm.jarden@gmail.com"}]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "pydantic",
+    "python-jose[cryptography]",
+    "passlib[bcrypt]",
+    "python-multipart",
+    "aiofiles",
+    "jinja2",
+    "bcrypt",
+    "aiosqlite",
+    "pydantic[email]",
+    "email-validator",
+    "python-dotenv"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = []

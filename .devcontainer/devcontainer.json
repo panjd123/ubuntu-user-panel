@@ -1,0 +1,23 @@
+{
+  "name": "Ubuntu-User-Panel-DEV",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."  // 注意 context 是 Docker 构建上下文，一般是你的项目根目录
+  },
+  "postCreateCommand": "uv venv && uv pip install -e .",
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-python.python",
+              "ms-vscode-remote.remote-containers"
+          ]
+      }
+  },
+  "portsAttributes": {
+      "8000": {
+          "label": "Application",
+          "onAutoForward": "notify"
+      }
+  },
+  "forwardPorts": [8000]
+}

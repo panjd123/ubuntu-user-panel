@@ -1,0 +1,15 @@
+[Unit]
+Description=User Panel Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/ubuntu-user-panel
+ExecStart=uv run python -m src.main
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
